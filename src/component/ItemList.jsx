@@ -1,6 +1,7 @@
 import Item from './Item'
+import { memo } from 'react'
 
-const ItemList = ({items}) => {
+const ItemList = ({items,page}) => {
     
     const Items = items.map(({id, text}) => (
         <Item
@@ -16,4 +17,4 @@ const ItemList = ({items}) => {
     );
 }
 
-export default ItemList
+export default memo(ItemList);
